@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import './RandomColorSelection.css';
+
 
 export default function RandomColor() {
   const [typeOfColor, setTypeOfColor] = useState("hex");
@@ -8,7 +10,7 @@ export default function RandomColor() {
     return Math.floor(Math.random() * length);
   }
 
-  function handleCreateRandomHexColor() {
+  const handleCreateRandomHexColor=()=> {
     // #678765
     const hex = [1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
     let hexColor = "#";
@@ -19,7 +21,7 @@ export default function RandomColor() {
     setColor(hexColor);
   }
 
-  function handleCreateRandomRgbColor() {
+  const handleCreateRandomRgbColor=()=> {
     const r = randomColorUtility(256);
     const g = randomColorUtility(256);
     const b = randomColorUtility(256);
